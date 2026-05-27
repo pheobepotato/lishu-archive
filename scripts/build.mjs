@@ -6,6 +6,11 @@ const contentDir = path.join(root, "content");
 const publicDir = path.join(root, "public");
 
 const site = JSON.parse(await fs.readFile(path.join(contentDir, "site.json"), "utf8"));
+const basePath = new URL(site.siteUrl).pathname.replace(/\/$/, "");
+
+function sitePath(pathname) {
+  return `${basePath}${pathname}`;
+}
 
 function escapeHtml(value = "") {
   return String(value)
@@ -149,16 +154,16 @@ function pageShell({ title, description, body, pathPrefix = "" }) {
   <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeHtml(description || site.description)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
-  <link rel="alternate" type="application/rss+xml" title="${escapeHtml(site.title)}" href="/rss.xml">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="alternate" type="application/rss+xml" title="${escapeHtml(site.title)}" href="${escapeHtml(sitePath("/rss.xml"))}">
+  <link rel="stylesheet" href="${escapeHtml(sitePath("/assets/style.css"))}">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-title" href="/">${escapeHtml(site.title)}</a>
+    <a class="site-title" href="${escapeHtml(sitePath("/"))}">${escapeHtml(site.title)}</a>
     <nav>
-      <a href="/archive/">Archive</a>
-      <a href="/about/">About</a>
-      <a href="/rss.xml">RSS</a>
+      <a href="${escapeHtml(sitePath("/archive/"))}">Archive</a>
+      <a href="${escapeHtml(sitePath("/about/"))}">About</a>
+      <a href="${escapeHtml(sitePath("/rss.xml"))}">RSS</a>
     </nav>
   </header>
   <main>
@@ -266,7 +271,7 @@ const indexBody = `    <section class="intro">
         .map(
           (article) => `<article>
         <p class="date">${escapeHtml(formatDate(article.date))}</p>
-        <h3><a href="${articleUrl(article)}">${escapeHtml(article.title)}</a></h3>
+        <h3><a href="${sitePath(articleUrl(article))}">${escapeHtml(article.title)}</a></h3>
         ${article.summary ? `<p>${escapeHtml(article.summary)}</p>` : ""}
       </article>`
         )
@@ -283,7 +288,7 @@ const archiveBody = `    <section class="archive">
       <ol>
         ${articles
           .map(
-            (article) => `<li><time>${escapeHtml(article.date)}</time><a href="${articleUrl(article)}">${escapeHtml(
+            (article) => `<li><time>${escapeHtml(article.date)}</time><a href="${sitePath(articleUrl(article))}">${escapeHtml(
               article.title
             )}</a></li>`
           )
@@ -350,7 +355,7 @@ await fs.writeFile(
   pageShell({
     title: "Not Found",
     description: site.description,
-    body: `    <article class="article">\n      <h1>Not Found</h1>\n      <p>This essay is not here. Go back to the <a href="/">home page</a>.</p>\n    </article>`,
+    body: `    <article class="article">\n      <h1>Not Found</h1>\n      <p>This essay is not here. Go back to the <a href="${sitePath("/")}">home page</a>.</p>\n    </article>`,
     pathPrefix: "/404.html"
   })
 );
