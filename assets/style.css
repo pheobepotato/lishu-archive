@@ -1,0 +1,198 @@
+:root {
+  color-scheme: light;
+  --paper: #fbfaf5;
+  --ink: #111;
+  --muted: #666;
+  --rule: #d8d3c6;
+  --link: #124f91;
+  --visited: #6b3f8f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+.site-header,
+main,
+footer {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-title {
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+}
+
+main {
+  padding: 42px 0 64px;
+}
+
+.intro {
+  margin-bottom: 48px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 34px;
+}
+
+h2 {
+  margin: 38px 0 18px;
+  font-size: 22px;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.date,
+.tags,
+.source-link,
+footer {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.tags span {
+  margin-right: 8px;
+}
+
+.article-list article {
+  margin: 0 0 30px;
+}
+
+.article-list .date {
+  margin-bottom: 2px;
+}
+
+.article {
+  max-width: 720px;
+}
+
+.article h2,
+.article h3,
+.article h4 {
+  margin-top: 38px;
+}
+
+.article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 28px 0;
+}
+
+blockquote {
+  margin: 26px 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--rule);
+  color: #333;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+.archive ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.archive time {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+footer {
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .archive li {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .archive time {
+    display: block;
+  }
+}

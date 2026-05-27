@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>梨薯 / Petato</title>
+  <link>https://pheobepotato.github.io/lishu-archive</link>
+  <description>A permanent public archive of essays on technology companies, products, business, and writing.</description>
+  <item>
+    <title>UniUni 的「$1B IPO」</title>
+    <link>https://pheobepotato.github.io/lishu-archive/articles/uniuni-1b-ipo/</link>
+    <guid>https://pheobepotato.github.io/lishu-archive/articles/uniuni-1b-ipo/</guid>
+    <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+    <description>5 月 15 日，温哥华的 UniUni 宣布要上市了，但严格说，它走的不是 IPO，是 SPAC 反向并购。 什么是 SPAC 反向并购 这里有三个概念。 SPAC：先空着上市、再去找标的的「壳公司」。这次的壳叫 MA</description>
+  </item>
+  <item>
+    <title>SpaceX：当人类把船开向星辰大海</title>
+    <link>https://pheobepotato.github.io/lishu-archive/articles/spacex-starship/</link>
+    <guid>https://pheobepotato.github.io/lishu-archive/articles/spacex-starship/</guid>
+    <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+    <description>5 月 20 日，SpaceX 提交了 S-1。媒体头条聚焦在数字——1.75 万亿美元估值、史上最大 IPO、马斯克可能成为人类首位万亿富翁。但只看这些数字，会错过这件事真正的分量。 这不仅是华尔街二十年来最重要的一次</description>
+  </item>
+  <item>
+    <title>XTransfer 招股书</title>
+    <link>https://pheobepotato.github.io/lishu-archive/articles/xtransfer-prospectus/</link>
+    <guid>https://pheobepotato.github.io/lishu-archive/articles/xtransfer-prospectus/</guid>
+    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+    <description>Extransfer Limited（XTransfer）于 2026 年 4 月 24 日正式向港交所主板递交招股书。作为招股书中所称的“全球最大 B2B 跨境贸易支付平台”，XTransfer 不只是一个跨境收款工具</description>
+  </item>
+  <item>
+    <title>钛动科技：要从 AppLovin 被做空说起</title>
+    <link>https://pheobepotato.github.io/lishu-archive/articles/tec-do-applovin-short/</link>
+    <guid>https://pheobepotato.github.io/lishu-archive/articles/tec-do-applovin-short/</guid>
+    <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+    <description>一家2000亿美元的公司，被连续做空四次？ AppLovin过去两年是华尔街最耀眼的科技股之一，市值从130亿美元一路飙到1760亿，两年涨了十倍，去年还被纳入了标普500。 但从2025年初开始，AppLovin遭遇了</description>
+  </item>
+  <item>
+    <title>翻译 | Ben Thompson：Shopify 财报与 Shopify 的 AI 优势</title>
+    <link>https://pheobepotato.github.io/lishu-archive/articles/ben-thompson-shopify-ai-advantage/</link>
+    <guid>https://pheobepotato.github.io/lishu-archive/articles/ben-thompson-shopify-ai-advantage/</guid>
+    <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+    <description>原文：Shopify Earnings, Shopify&#39;s AI Advantages｜作者：Ben Thompson（Stratechery）｜发表日期：2026 年 2 月 18 日｜翻译及前言：梨薯 译者前言 最</description>
+  </item>
+</channel>
+</rss>
